@@ -11,10 +11,9 @@ WHERE name = "Szende";
 
 SELECT * FROM szende;
 
--- összes rendelés ahova biciklis gáspár szállít ki
+-- összes rendelés ahova zsákos frodó szállít ki
 
 CREATE VIEW zsakos AS
-
 SELECT orders.date, orders.time, pizzas.name AS pizza_name, customers.name
 FROM orders
 INNER JOIN couriers ON orders.courier_id = couriers.id
